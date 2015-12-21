@@ -1,0 +1,10 @@
+link(rel='import', href='../../bower_components/polymer/polymer.html')
+dom-module#my-list
+    link(rel='import', type='css', href='my-list.css')
+    template
+        ul
+            template(is="dom-repeat", items="{{items}}")
+                li
+                    span.paper-font-body1 {{item}}
+  
+    script(src='my-list.js')

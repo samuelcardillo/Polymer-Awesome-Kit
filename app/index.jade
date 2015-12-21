@@ -1,0 +1,142 @@
+doctype html
+//
+  @license
+  Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+  This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+  The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+  The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+  Code distributed by Google as part of the polymer project is also
+  subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='generator', content='Polymer Starter Kit')
+    title Polymer Starter Kit
+    // Place favicon.ico in the `app/` directory
+    // Chrome for Android theme color
+    meta(name='theme-color', content='#2E3AA1')
+    // Web Application Manifest
+    link(rel='manifest', href='manifest.json')
+    // Tile color for Win8
+    meta(name='msapplication-TileColor', content='#3372DF')
+    // Add to homescreen for Chrome on Android
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='application-name', content='PSK')
+    link(rel='icon', sizes='192x192', href='images/touch/chrome-touch-icon-192x192.png')
+    // Add to homescreen for Safari on iOS
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='apple-mobile-web-app-title', content='Polymer Starter Kit')
+    link(rel='apple-touch-icon', href='images/touch/apple-touch-icon.png')
+    // Tile icon for Win8 (144x144)
+    meta(name='msapplication-TileImage', content='images/touch/ms-touch-icon-144x144-precomposed.png')
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+    // build:js bower_components/webcomponentsjs/webcomponents-lite.min.js
+    script(src='bower_components/webcomponentsjs/webcomponents-lite.js')
+    // endbuild
+    //
+      Because this project uses vulcanize this should be your only html import
+      in this file. All other imports should go in elements.html
+    link(rel='import', href='elements/elements.html')
+    // For shared styles, shared-styles.html import in elements.html
+    style(is='custom-style', include='shared-styles').
+  body.fullbleed.layout.vertical(unresolved='')
+    span#browser-sync-binding
+    template#app(is='dom-bind')
+      paper-drawer-panel#paperDrawerPanel
+        // Drawer Scroll Header Panel
+        paper-scroll-header-panel(drawer='', fixed='')
+          // Drawer Toolbar
+          paper-toolbar#drawerToolbar
+            span.paper-font-title Menu
+          // Drawer Content
+          paper-menu.list(attr-for-selected='data-route', selected='[[route]]')
+            a(data-route='home', href='{{baseUrl}}')
+              iron-icon(icon='home')
+              span Home
+            a(data-route='users', href='{{baseUrl}}users')
+              iron-icon(icon='info')
+              span Users
+            a(data-route='contact', href='{{baseUrl}}contact')
+              iron-icon(icon='mail')
+              span Contact
+        // Main Area
+        paper-scroll-header-panel#headerPanelMain(main='', condenses='', keep-condensed-header='')
+          // Main Toolbar
+          paper-toolbar#mainToolbar.tall
+            paper-icon-button#paperToggle(icon='menu', paper-drawer-toggle='')
+            span.flex
+            // Toolbar icons
+            paper-icon-button(icon='refresh')
+            paper-icon-button(icon='search')
+            // Application name
+            .middle.middle-container.center.horizontal.layout
+              .app-name Polymer Starter Kit
+            // Application sub title
+            .bottom.bottom-container.center.horizontal.layout
+              .bottom-title.paper-font-subhead The future of the web today
+          // Main Content
+          .content
+            iron-pages(attr-for-selected='data-route', selected='{{route}}')
+              section(data-route='home')
+                paper-material(elevation='1')
+                  my-greeting
+                  p.paper-font-subhead You now have:
+                  my-list
+                  p.paper-font-body2
+                    | Looking for more Web App layouts? Check out our 
+                    a(href='https://github.com/PolymerElements/app-layout-templates') layouts
+                    |  collection. You can also 
+                    a(href='http://polymerelements.github.io/app-layout-templates/') preview
+                    |  them live.
+                paper-material(elevation='1')
+                  p.paper-font-body2 This is another card.
+                paper-material.paper-font-body2(elevation='1')
+                  h1#license License
+                  p Everything in this repo is BSD style license unless otherwise specified.
+                  p Copyright (c) 2015 The Polymer Authors. All rights reserved.
+                  p
+                    | Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+                  ul
+                    li
+                      | Redistributions of source code must retain the above copyright
+                      | notice, this list of conditions and the following disclaimer.
+                    li
+                      | Redistributions in binary form must reproduce the above
+                      | copyright notice, this list of conditions and the following disclaimer
+                      | in the documentation and/or other materials provided with the
+                      | distribution.
+                    li
+                      | Neither the name of Google Inc. nor the names of its
+                      | contributors may be used to endorse or promote products derived from
+                      | this software without specific prior written permission.
+                  p
+                    | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+              section(data-route='users')
+                paper-material(elevation='1')
+                  h2.page-title Users
+                  p This is the users section
+                  a(href$='{{baseUrl}}users/Addy') Addy
+                  br
+                  a(href$='{{baseUrl}}users/Rob') Rob
+                  br
+                  a(href$='{{baseUrl}}users/Chuck') Chuck
+                  br
+                  a(href$='{{baseUrl}}users/Sam') Sam
+              section(data-route='user-info')
+                paper-material(elevation='1')
+                  h2.page-title User: {{params.name}}
+                  div This is {{params.name}}'s section
+              section(data-route='contact')
+                paper-material(elevation='1')
+                  h2.page-title Contact
+                  p This is the contact section
+      paper-toast#toast
+        span.toast-hide-button(role='button', tabindex='0', onclick='app.$.toast.hide()') Ok
+    // build:js scripts/app.js
+    script(src='scripts/app.js')
+    // endbuild
