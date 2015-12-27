@@ -1,0 +1,9 @@
+app/bower_components
+.DS_Store
+.tmp
+.publish/
+dist/
+app/elements/*/*/*.html
+app/elements/*/*/*.css
+app/elements/*/*/*.js
+app/*.html
