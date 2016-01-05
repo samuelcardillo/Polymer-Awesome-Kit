@@ -4,7 +4,7 @@ app/bower_components
 .publish/
 node_modules/
 dist/
-app/elements/*/*/*.html
-app/elements/*/*/*.css
-app/elements/*/*/*.js
+app/elements/*/**/*.html
+app/elements/*/**/*.css
+app/elements/*/**/*.js
 app/*.html
