@@ -3,7 +3,7 @@
 > The Polymer Starter Kit with few improvements....
 
 ### Included out of the box:
-* [Polymer Starter Kit 1.2.1](https://github.com/polymerelements/polymer-starter-kit/releases)
+* [Polymer Starter Kit 1 (1.2.1)](https://github.com/polymerelements/polymer-starter-kit/releases)
 * [Jade template engine](http://jade-lang.com/)
 * [Sass](http://sass-lang.com/)
 * [CoffeeScript](http://coffeescript.org/)
