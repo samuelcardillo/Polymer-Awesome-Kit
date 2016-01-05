@@ -2,6 +2,7 @@ app/bower_components
 .DS_Store
 .tmp
 .publish/
+node_modules/
 dist/
 app/elements/*/*/*.html
 app/elements/*/*/*.css
