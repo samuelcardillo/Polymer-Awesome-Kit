@@ -1,10 +1,12 @@
 link(rel='import', href='../../bower_components/polymer/polymer.html')
+link(rel='import', href='../../bower_components/paper-styles/typography.html')
+
 dom-module#my-greeting
   link(rel='import', type='css', href='my-greeting.css')
   template
     h2.page-title {{greeting}}
-    span.paper-font-body2 Update text to change the greeting.
+    span Update text to change the greeting.
     // Listens for "input" event and sets greeting to <input>.value
-    input.paper-font-body2(value='{{greeting::input}}')
+    input(value='{{greeting::input}}')
   
   script(src='my-greeting.js')

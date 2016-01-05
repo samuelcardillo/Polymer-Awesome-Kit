@@ -12,8 +12,8 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='generator', content='Polymer Starter Kit')
-    title Polymer Starter Kit
+    meta(name='generator', content='Polymer Awesome Kit')
+    title Polymer Awesome Kit (based on Polymer Starter Kit)
     // Place favicon.ico in the `app/` directory
     // Chrome for Android theme color
     meta(name='theme-color', content='#2E3AA1')
@@ -44,7 +44,7 @@ html(lang='en')
     link(rel='import', href='elements/elements.html')
     // For shared styles, shared-styles.html import in elements.html
     style(is='custom-style', include='shared-styles').
-  body.fullbleed.layout.vertical(unresolved='')
+  body(unresolved)
     span#browser-sync-binding
     template#app(is='dom-bind')
       paper-drawer-panel#paperDrawerPanel
@@ -52,9 +52,9 @@ html(lang='en')
         paper-scroll-header-panel(drawer='', fixed='')
           // Drawer Toolbar
           paper-toolbar#drawerToolbar
-            span.paper-font-title Menu
+            span.menu-name Menu
           // Drawer Content
-          paper-menu.list(attr-for-selected='data-route', selected='[[route]]')
+          paper-menu(attr-for-selected='data-route', selected='[[route]]')
             a(data-route='home', href='{{baseUrl}}')
               iron-icon(icon='home')
               span Home
@@ -69,33 +69,33 @@ html(lang='en')
           // Main Toolbar
           paper-toolbar#mainToolbar.tall
             paper-icon-button#paperToggle(icon='menu', paper-drawer-toggle='')
-            span.flex
+            span.space
             // Toolbar icons
             paper-icon-button(icon='refresh')
             paper-icon-button(icon='search')
             // Application name
-            .middle.middle-container.center.horizontal.layout
+            .middle.middle-container
               .app-name Polymer Starter Kit
             // Application sub title
-            .bottom.bottom-container.center.horizontal.layout
-              .bottom-title.paper-font-subhead The future of the web today
+            .bottom.bottom-container
+              .bottom-title The future of the web today
           // Main Content
           .content
             iron-pages(attr-for-selected='data-route', selected='{{route}}')
               section(data-route='home')
                 paper-material(elevation='1')
                   my-greeting
-                  p.paper-font-subhead You now have:
+                  p.subhead You now have:
                   my-list
-                  p.paper-font-body2
+                  p
                     | Looking for more Web App layouts? Check out our 
                     a(href='https://github.com/PolymerElements/app-layout-templates') layouts
                     |  collection. You can also 
                     a(href='http://polymerelements.github.io/app-layout-templates/') preview
                     |  them live.
                 paper-material(elevation='1')
-                  p.paper-font-body2 This is another card.
-                paper-material.paper-font-body2(elevation='1')
+                  p This is another card.
+                paper-material(elevation='1')
                   h1#license License
                   p Everything in this repo is BSD style license unless otherwise specified.
                   p Copyright (c) 2015 The Polymer Authors. All rights reserved.
