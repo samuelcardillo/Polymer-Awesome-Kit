@@ -14,9 +14,10 @@ There is nothing different than the [Polymer Starter Kit](https://github.com/Pol
 
 ![](http://image.noelshack.com/fichiers/2015/52/1450693863-capture-d-ecran-2015-12-21-a-11-30-35.png)
 
-* Install the dependencies with `bower install` & `npm install`. 
-* Use `gulp serve` to start a local test environment. Any changes on the *CoffeeScript, the Jade and the SASS files* are directly compiled and served in the browser. 
+* Install the dependencies with `npm install && bower install`. 
+* Use `gulp serve` to start a local test environment. Any changes on a *CoffeeScript, Jade or SASS file* is directly compiled and served in the browser. 
 * Use `gulp serve:dist` to start a local dist environment or `gulp`to just compile everything and push the files on your FTP. 
+* Use `gulp clean` to automatically clean the app directory (*deleting .html, .css & .js files*) and delete *dist*.
 
 The `gulp` and `gulp serve:dist` commands are directly compiling, minifying, vulcanizing, embedding the code and cleaning the repertories.
 

@@ -244,7 +244,7 @@ gulp.task('clean', function() {
 });
 
 // Watch files for changes & reload
-gulp.task('serve', ['jade','coffee','sass','styles', 'elements', 'images'], function() {
+gulp.task('serve', ['jade','coffee','sass','styles', 'elements'], function() {
   browserSync({
     port: 5000,
     notify: false,
