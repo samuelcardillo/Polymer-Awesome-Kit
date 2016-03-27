@@ -4,7 +4,7 @@ link(rel='import', href='../../bower_components/paper-styles/typography.html')
 dom-module#my-greeting
   link(rel='import', type='css', href='my-greeting.css')
   template
-    h1.page-title {{greeting}}
+    h1(tabindex="-1").page-title {{greeting}}
     label(for="greeting-input") Update text to change the greeting.
     // Listens for "input" event and sets greeting to <input>.value
     input(value='{{greeting::input}}')#greeting-input

@@ -121,7 +121,7 @@ html(lang='en')
                     | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
               section(data-route='users',tabindex="-1")
                 paper-material(elevation='1')
-                  h1.page-title Users
+                  h1(tabindex="-1").page-title Users
                   p This is the users section
                   a(href$='{{baseUrl}}users/Addy') Addy
                   br
@@ -132,11 +132,11 @@ html(lang='en')
                   a(href$='{{baseUrl}}users/Sam') Sam
               section(data-route='user-info',tabindex="-1")
                 paper-material(elevation='1')
-                  h1.page-title User: {{params.name}}
+                  h1(tabindex="-1").page-title User: {{params.name}}
                   div This is {{params.name}}'s section
               section(data-route='contact',tabindex="-1")
                 paper-material(elevation='1')
-                  h1.page-title Contact
+                  h1(tabindex="-1").page-title Contact
                   p This is the contact section
       paper-toast#toast
         span.toast-hide-button(role='button', tabindex='0', onclick='app.$.toast.hide()') Ok
