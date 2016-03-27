@@ -57,7 +57,7 @@ html(lang='en')
           paper-toolbar#drawerToolbar
             span.menu-name Menu
           // Drawer Content
-          paper-menu(attr-for-selected='data-route', selected='[[route]]')
+          paper-menu(attr-for-selected='data-route', selected='[[route]]').app-menu
             a(data-route='home', href='{{baseUrl}}')
               iron-icon(icon='home')
               span Home
