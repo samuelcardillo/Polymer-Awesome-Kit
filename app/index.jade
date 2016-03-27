@@ -45,6 +45,9 @@ html(lang='en')
     // For shared styles, shared-styles.html import in elements.html
     style(is='custom-style', include='shared-styles').
   body(unresolved)
+    // build:remove
+    <span id="browser-sync-binding"></span>
+    // endbuild
     span#browser-sync-binding
     template#app(is='dom-bind')
       paper-drawer-panel#paperDrawerPanel
