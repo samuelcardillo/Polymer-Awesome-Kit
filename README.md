@@ -1,3 +1,5 @@
+# DEPRECATED: ABC Polymer is done for an old version of Polymer (<2.0) and has not been updated yet.
+
 ![](http://image.noelshack.com/fichiers/2015/52/1450692669-polymerawesome.png)
 ## Polymer Awesome Kit
 > The Polymer Starter Kit with few improvements....
